@@ -1,7 +1,7 @@
 # PyCoreML
 Python bindings for Apple's CoreML library
 
-#Supported OS & Tools Versions
+# Requirements
 - MacOS 10.13 High Sierra Beta
 - XCode 9.0 beta 3
 - CoreML 1.0(42)
