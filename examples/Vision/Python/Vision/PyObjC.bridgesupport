@@ -1,0 +1,265 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<constant name='VNBarcodeSymbologyAztec' type64='@'/>
+<constant name='VNBarcodeSymbologyCODE128' type64='@'/>
+<constant name='VNBarcodeSymbologyCODE39' type64='@'/>
+<constant name='VNBarcodeSymbologyCODE39Checksum' type64='@'/>
+<constant name='VNBarcodeSymbologyCODE39FullASCII' type64='@'/>
+<constant name='VNBarcodeSymbologyCODE39FullASCIIChecksum' type64='@'/>
+<constant name='VNBarcodeSymbologyCODE93' type64='@'/>
+<constant name='VNBarcodeSymbologyCODE93i' type64='@'/>
+<constant name='VNBarcodeSymbologyDataMatrix' type64='@'/>
+<constant name='VNBarcodeSymbologyEAN13' type64='@'/>
+<constant name='VNBarcodeSymbologyEAN8' type64='@'/>
+<constant name='VNBarcodeSymbologyI2OF5' type64='@'/>
+<constant name='VNBarcodeSymbologyI2OF5Checksum' type64='@'/>
+<constant name='VNBarcodeSymbologyITF14' type64='@'/>
+<constant name='VNBarcodeSymbologyPDF417' type64='@'/>
+<constant name='VNBarcodeSymbologyQR' type64='@'/>
+<constant name='VNBarcodeSymbologyUPCE' type64='@'/>
+<constant name='VNErrorDomain' type64='@'/>
+<constant name='VNImageOptionCameraIntrinsics' type64='@'/>
+<constant name='VNImageOptionProperties' type64='@'/>
+<constant name='VNNormalizedIdentityRect' type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<constant name='VNVisionVersionNumber' type64='d'/>
+<enum name='VNErrorIOError' value64='6'/>
+<enum name='VNErrorInternalError' value64='9'/>
+<enum name='VNErrorInvalidArgument' value64='14'/>
+<enum name='VNErrorInvalidFormat' value64='2'/>
+<enum name='VNErrorInvalidImage' value64='13'/>
+<enum name='VNErrorInvalidModel' value64='15'/>
+<enum name='VNErrorInvalidOperation' value64='12'/>
+<enum name='VNErrorInvalidOption' value64='5'/>
+<enum name='VNErrorMissingOption' value64='7'/>
+<enum name='VNErrorNotImplemented' value64='8'/>
+<enum name='VNErrorOK' value64='0'/>
+<enum name='VNErrorOperationFailed' value64='3'/>
+<enum name='VNErrorOutOfBoundsError' value64='4'/>
+<enum name='VNErrorOutOfMemory' value64='10'/>
+<enum name='VNErrorRequestCancelled' value64='1'/>
+<enum name='VNErrorUnknownError' value64='11'/>
+<enum name='VNImageCropAndScaleOptionCenterCrop' value64='0'/>
+<enum name='VNImageCropAndScaleOptionScaleFill' value64='2'/>
+<enum name='VNImageCropAndScaleOptionScaleFit' value64='1'/>
+<enum name='VNRequestTrackingLevelAccurate' value64='0'/>
+<enum name='VNRequestTrackingLevelFast' value64='1'/>
+<function name='VNImagePointForFaceLandmarkPoint'>
+<arg type64=''/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='VNImagePointForNormalizedPoint'>
+<arg type64='{CGPoint=dd}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='VNImageRectForNormalizedRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='VNNormalizedFaceBoundingBoxPointForLandmarkPoint'>
+<arg type64=''/>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<retval type64='{CGPoint=dd}'/>
+</function>
+<function name='VNNormalizedRectForImageRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<arg type64='Q'/>
+<arg type64='Q'/>
+<retval type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+</function>
+<function name='VNNormalizedRectIsIdentityRect'>
+<arg type64='{CGRect={CGPoint=dd}{CGSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<class name='VNCoreMLRequest'>
+<method selector='initWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithModel:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+
+<class name='VNDetectTextRectanglesRequest'>
+<method selector='reportCharacterBoxes'>
+<retval type64='B'/>
+</method>
+<method selector='setReportCharacterBoxes:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+
+<!-- DOESN'T WORK 
+<class name='VNImageHomographicAlignmentObservation'>
+<method selector='setWarpTransform:'>
+<arg index='0' type64='{_matrix_float3x3=[3]}'/>
+</method>
+<method selector='warpTransform'>
+<retval type64='{_matrix_float3x3=[3]}'/>
+</method>
+</class>
+-->
+
+<class name='VNImageRequestHandler'>
+<method selector='performRequests:error:'>
+<retval type64='B'/>
+</method>
+</class>
+
+<class name='VNRequest'>
+<method selector='initWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='preferBackgroundProcessing'>
+<retval type64='B'/>
+</method>
+<method selector='setPreferBackgroundProcessing:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+
+<class name='VNSequenceRequestHandler'>
+<method selector='performRequests:onCGImage:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onCGImage:orientation:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onCIImage:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onCIImage:orientation:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onCVPixelBuffer:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onCVPixelBuffer:orientation:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onImageData:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onImageData:orientation:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onImageURL:error:'>
+<retval type64='B'/>
+</method>
+<method selector='performRequests:onImageURL:orientation:error:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='VNTargetedImageRequest'>
+<method selector='initWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithTargetedCGImage:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithTargetedCIImage:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithTargetedCVPixelBuffer:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithTargetedImageData:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithTargetedImageURL:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='VNTrackObjectRequest'>
+<method selector='initWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithDetectedObjectObservation:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='VNTrackRectangleRequest'>
+<method selector='initWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithRectangleObservation:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='VNTrackingRequest'>
+<method selector='initWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='isLastFrame'>
+<retval type64='B'/>
+</method>
+<method selector='setLastFrame:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+</signatures>
